@@ -89,10 +89,8 @@ def standardDeviation():
 
 while (stop == 0):
     try:
-        userInput = float(input())
+        userInput = input()
     except EOFError:
-        exit(84)
-    except ValueError:
         exit(84)
     if stop == 0:
         if str(userInput) == "STOP":
@@ -106,5 +104,6 @@ while (stop == 0):
             standardDeviation()
             display_results()
         except ValueError:
-            stop = 0
+            exit(84)
 print("Global tendency switched", nbSwitch, "times")
+exit(0)
